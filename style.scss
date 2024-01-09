@@ -1,12 +1,24 @@
-@use "_variables.scss";
-body {
+@use "sass/mixin";
+@use "sass/variables" as var;
+
+body, html {
   line-height: 1;
 }
 
+* {
+  outline: 2px solid blue;
+  // @include sp {
+  //   outline: 2px solid red;
+  // }
+}
+
 header {
-  background-color: white;
+  @media screen and (max-width: 767px) {
+    color: red;
+  }
+  background-color: var.$color-white;
   font-size: 20px;
-  width: 100%;
+  width: 100vw;
   height: 110px;
   position: fixed;
   top: 0;
@@ -16,6 +28,7 @@ header {
   border-radius: 0px 0px 20px 20px;
   box-shadow: 0px 10px 20px #0000001a;
   .wrap {
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -41,19 +54,19 @@ header {
       .vertical-line {
         width: 1px;
         height: 38px;
-        background-color: #004225;
+        background-color: var.$color-green;
       }
       .items {
         font-weight: 600;
-        color: #004225;
+        color: var.$color-green;
         cursor: pointer;
         &:hover {
-          color: lighten(#004225, 10%);
+          color: lighten(var.$color-green, 10%);
         }
       }
       .normal-button {
-        background-color: #004225;
-        color: #ffffff;
+        background-color: var.$color-green;
+        color: var.$color-white;
         border-radius: 6px;
         padding: 16px 48px;
         letter-spacing: 0.02em;
@@ -61,7 +74,7 @@ header {
         cursor: pointer;
         transition: all 0.3s ease;
         &:hover {
-          background-color: lighten(#004225, 5%);
+          background-color: lighten(var.$color-green, 5%);
         }
       }
     }
@@ -125,13 +138,13 @@ header {
       margin-bottom: 88px;
 
       .title {
-        color: #004225;
+        color: var.$color-green;
         font-size: 36px;
         width: 400px;
         height: 42px;
         text-align: center;
-        border-left: 4px solid #004225;
-        border-right: 4px solid #004225;
+        border-left: 4px solid var.$color-green;
+        border-right: 4px solid var.$color-green;
       }
     }
 
@@ -141,23 +154,25 @@ header {
       align-items: center;
       width: 60%;
       height: 270px;
-      border: 4px solid #004225;
+      border: 4px solid var.$color-green;
       
       .sub-title {
         font-size: 24px;
-        color: #004225;
+        font-weight: 600;
+        color: var.$color-green;
       }
       
       .main-title {
         font-size: 32px;
-        color: #004225;
+        font-weight: 600;
+        color: var.$color-green;
         margin-top: 8px;
       }
       
       .description {
         font-size: 20px;
         font-weight: 300;
-        width: 640px;
+        width: 100%;
         overflow-wrap: break-word;
         word-break: keep-all;
         line-height: 2rem;
@@ -206,26 +221,26 @@ header {
       margin-bottom: 88px;
 
       .title {
-        color: #004225;
+        color: var.$color-green;
         font-size: 36px;
         width: 400px;
         height: 42px;
         text-align: center;
-        border-left: 4px solid #004225;
-        border-right: 4px solid #004225;
+        border-left: 4px solid var.$color-green;
+        border-right: 4px solid var.$color-green;
       }
     }
 
     .plan-card-wrapper {
       margin: auto;
-      width: 1224px;
+      // width: 1224px;
       margin-top: 72px;
       display: flex;
       justify-content: space-between;
       gap: 56px;
 
       .card {
-        border: 4px solid #004225;
+        border: 4px solid var.$color-green;
         border-radius: 30px;
         background: #fff;
         width: 350px;
@@ -234,10 +249,10 @@ header {
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        color: #004225B2;
+        color: rgba(var.$color-green, .7);
 
         &:nth-child(2) {
-          background: #004225;
+          background: var.$color-green;
           color: #fff;
         }
 
@@ -269,7 +284,7 @@ header {
     }
 
     .plan-description-card-wrapper {
-      width: 1224px;
+      // width: 1224px;
       margin: auto;
       margin-top: 136px;
       display: flex;
@@ -278,7 +293,7 @@ header {
       align-items: center;
 
       .description-card {
-        color: #004225B2;
+        color: rgba(var.$color-green, .7);
         background: #fff;
         display: flex;
         padding: 0 72px;
@@ -286,12 +301,12 @@ header {
         justify-content: space-between;
         width: 100%;
         height: 280px;
-        border: 2px solid #004225;
+        border: 2px solid var.$color-green;
         border-radius: 30px;
 
         &:nth-child(1) {
           color: #fff;
-          background: #004225;
+          background: var.$color-green;
         }
 
         .spaces {
@@ -336,8 +351,8 @@ header {
       width: 240px;
       height: 56px;
       background: #fff;
-      border: 2px solid #004225;
-      color: #004225;
+      border: 2px solid var.$color-green;
+      color: var.$color-green;
       font-size: 20px;
       font-weight: 600;
       border-radius: 10px;
@@ -352,44 +367,42 @@ header {
     }
   }
   .common-section {
-    padding: 96px 0;
+    padding: 50px 0;
     width: 100%;
     
     .title-wrapper {
       display: flex;
       justify-content: center;
-      margin-bottom: 88px;
-
+      padding: 40px 0;
       .title {
-        color: #004225;
+        color: var.$color-green;
         font-size: 36px;
         width: 400px;
         height: 42px;
         text-align: center;
-        border-left: 4px solid #004225;
-        border-right: 4px solid #004225;
+        border-left: 4px solid var.$color-green;
+        border-right: 4px solid var.$color-green;
       }
     }
 
     .contents-wrapper {
       display: flex;
       justify-content: center;
-      gap: 110px;
+      gap: 40px;
 
       .content {
         width: 460px;
-
         img {
           width: 100%;
           height: 288px;
-          border: 4px solid #004225;
-          border-radius: 30px;
+          border: 4px solid var.$color-green;
+          border-radius: 20px;
         }
 
         .text {
-          margin-top: 40px;
-          font-size: 24px;
-          color: #004225;
+          padding: 20px 0;
+          font-size: 20px;
+          color: var.$color-green;
           font-weight: 600;
           line-height: 2rem;
         }
@@ -407,13 +420,13 @@ header {
       margin-bottom: 72px;
 
       .title {
-        color: #004225;
+        color: var.$color-green;
         font-size: 36px;
         width: 400px;
         height: 42px;
         text-align: center;
-        border-left: 4px solid #004225;
-        border-right: 4px solid #004225;
+        border-left: 4px solid var.$color-green;
+        border-right: 4px solid var.$color-green;
       }
     }
 
@@ -426,7 +439,7 @@ header {
         .question {
           font-size: 24px;
           font-weight: 600;
-          color: #004225;
+          color: var.$color-green;
           margin-bottom: 40px;
 
           &::before {
@@ -434,7 +447,7 @@ header {
             font-size: 36px;
             font-weight: 600;
             margin-right: 24px;
-            color: #004225B2;
+            color: rgba(var.$color-green, .7);
           }
         }
 
@@ -445,7 +458,7 @@ header {
           .main-text {
             font-size: 24px;
             font-weight: 600;
-            color: #004225;
+            color: var.$color-green;
             margin-bottom: 20px;
 
             &::before {
@@ -453,7 +466,7 @@ header {
               font-size: 36px;
               font-weight: 600;
               margin-right: 24px;
-              color: #004225B2;
+              color: rgba(var.$color-green, .7);
             }
           }
 
@@ -463,7 +476,7 @@ header {
             width: 920px;
             overflow-wrap: break-word;
             word-break: keep-all;
-            color: #004225;
+            color: var.$color-green;
             line-height: 2rem;
           }
         }
@@ -472,19 +485,19 @@ header {
   }
   .example-section {
     padding: 50px 0;
-    color: #004225;
+    color: var.$color-green;
     .title-wrapper {
       padding: 20px 0;
       display: flex;
       justify-content: center;
       .title {
-        color: #004225;
+        color: var.$color-green;
         font-size: 36px;
         width: 400px;
         height: 42px;
         text-align: center;
-        border-left: 4px solid #004225;
-        border-right: 4px solid #004225;
+        border-left: 4px solid var.$color-green;
+        border-right: 4px solid var.$color-green;
       }
     }
 
@@ -506,7 +519,7 @@ header {
           img {
             width: 100%;
             height: 100%;
-            border: 3px solid #004225;
+            border: 3px solid var.$color-green;
             border-radius: 20px;
           }
         }
@@ -532,8 +545,8 @@ header {
       width: 240px;
       height: 56px;
       background: #fff;
-      border: 2px solid #004225;
-      color: #004225;
+      border: 2px solid var.$color-green;
+      color: var.$color-green;
       font-size: 20px;
       font-weight: 600;
       border-radius: 10px;
@@ -557,7 +570,7 @@ header {
       width: 75%;
       max-width: 1200px;
       align-items: center;
-      background-color: #ffffff;
+      background-color: var.$color-white;
       margin: 0 auto;
       &:before {
         position: absolute;
@@ -569,7 +582,7 @@ header {
         backdrop-filter: blur(3px) brightness(0.5);
       }
       .flow-contents {
-        color: #004225;
+        color: var.$color-green;
         .flow-header {
           background-color: #E5EDEC;
           font-size: 36px;
@@ -605,8 +618,8 @@ header {
   }
   
   .form-guide {
-    background-color: #004225;
-    color: #ffffff;
+    background-color: var.$color-green;
+    color: var.$color-white;
     text-align: center;
     padding: 30px 0;
     font-size: 32px;
@@ -638,16 +651,16 @@ header {
 
         // }
         .required {
-          color: #ffffff;
-          background-color: #004225;
+          color: var.$color-white;
+          background-color: var.$color-green;
           text-align: center;
           padding: 10px;
-          border: 2px solid #004225;
+          border: 2px solid var.$color-green;
           border-radius: 10px;
         }
         .optional {
-          color: #004225;
-          background-color: #ffffff;
+          color: var.$color-green;
+          background-color: var.$color-white;
           text-align: center;
           padding: 10px;
           border: 2px solid #000;
@@ -657,14 +670,14 @@ header {
           width: 200px;
           height: 20px;
           padding: 3px;
-          background-color: #ffffff;
+          background-color: var.$color-white;
           border: 1px solid #000;
         }
         .form {
           width: 200px;
           height: 20px;
           padding: 3px;
-          background-color: #ffffff;
+          background-color: var.$color-white;
           border: 1px solid #000;
         }
       }
@@ -674,8 +687,8 @@ header {
       height: 30px;
     }
     .normal-button {
-      background-color: #004225;
-      color: #ffffff;
+      background-color: var.$color-green;
+      color: var.$color-white;
       border-radius: 6px;
       padding: 16px 48px;
       letter-spacing: 0.02em;
@@ -683,15 +696,15 @@ header {
       cursor: pointer;
       transition: all 0.3s ease;
       &:hover {
-        background-color: lighten(#004225, 5%);
+        background-color: lighten(var.$color-green, 5%);
       }
     }
   }
 }
 
 footer {
-  background-color: #004225;
-  color: #ffffff;
+  background-color: var.$color-green;
+  color: var.$color-white;
   width: 100%;
   padding: 20px;
   .wrap {
@@ -718,7 +731,7 @@ footer {
         font-weight: 300;
         cursor: pointer;
         &:hover {
-          color: lighten(#ffffff, 10%);
+          color: lighten(var.$color-white, 10%);
         }
       }
       .page-guide-item {

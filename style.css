@@ -9,14 +9,18 @@ ul li {
   }
 }
 
-body {
+body, html {
   line-height: 1;
 }
 
+* {
+  outline: 2px solid blue;
+}
+
 header {
-  background-color: white;
+  background-color: #ffffff;
   font-size: 20px;
-  width: 100%;
+  width: 100vw;
   height: 110px;
   position: fixed;
   top: 0;
@@ -26,7 +30,13 @@ header {
   border-radius: 0px 0px 20px 20px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1019607843);
 }
+@media screen and (max-width: 767px) {
+  header {
+    color: red;
+  }
+}
 header .wrap {
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -155,17 +165,19 @@ header .wrap .header-menu .normal-button:hover {
 }
 .body .service-section .left-card .sub-title, .body .service-section .right-card .sub-title {
   font-size: 24px;
+  font-weight: 600;
   color: #004225;
 }
 .body .service-section .left-card .main-title, .body .service-section .right-card .main-title {
   font-size: 32px;
+  font-weight: 600;
   color: #004225;
   margin-top: 8px;
 }
 .body .service-section .left-card .description, .body .service-section .right-card .description {
   font-size: 20px;
   font-weight: 300;
-  width: 640px;
+  width: 100%;
   overflow-wrap: break-word;
   word-break: keep-all;
   line-height: 2rem;
@@ -217,7 +229,6 @@ header .wrap .header-menu .normal-button:hover {
 }
 .body .plan-section .plan-card-wrapper {
   margin: auto;
-  width: 1224px;
   margin-top: 72px;
   display: flex;
   justify-content: space-between;
@@ -233,7 +244,7 @@ header .wrap .header-menu .normal-button:hover {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  color: rgba(0, 66, 37, 0.6980392157);
+  color: rgba(0, 66, 37, 0.7);
 }
 .body .plan-section .plan-card-wrapper .card:nth-child(2) {
   background: #004225;
@@ -261,7 +272,6 @@ header .wrap .header-menu .normal-button:hover {
   line-height: 2rem;
 }
 .body .plan-section .plan-description-card-wrapper {
-  width: 1224px;
   margin: auto;
   margin-top: 136px;
   display: flex;
@@ -270,7 +280,7 @@ header .wrap .header-menu .normal-button:hover {
   align-items: center;
 }
 .body .plan-section .plan-description-card-wrapper .description-card {
-  color: rgba(0, 66, 37, 0.6980392157);
+  color: rgba(0, 66, 37, 0.7);
   background: #fff;
   display: flex;
   padding: 0 72px;
@@ -333,13 +343,13 @@ header .wrap .header-menu .normal-button:hover {
   margin-left: 8px;
 }
 .body .common-section {
-  padding: 96px 0;
+  padding: 50px 0;
   width: 100%;
 }
 .body .common-section .title-wrapper {
   display: flex;
   justify-content: center;
-  margin-bottom: 88px;
+  padding: 40px 0;
 }
 .body .common-section .title-wrapper .title {
   color: #004225;
@@ -353,7 +363,7 @@ header .wrap .header-menu .normal-button:hover {
 .body .common-section .contents-wrapper {
   display: flex;
   justify-content: center;
-  gap: 110px;
+  gap: 40px;
 }
 .body .common-section .contents-wrapper .content {
   width: 460px;
@@ -362,11 +372,11 @@ header .wrap .header-menu .normal-button:hover {
   width: 100%;
   height: 288px;
   border: 4px solid #004225;
-  border-radius: 30px;
+  border-radius: 20px;
 }
 .body .common-section .contents-wrapper .content .text {
-  margin-top: 40px;
-  font-size: 24px;
+  padding: 20px 0;
+  font-size: 20px;
   color: #004225;
   font-weight: 600;
   line-height: 2rem;
@@ -409,7 +419,7 @@ header .wrap .header-menu .normal-button:hover {
   font-size: 36px;
   font-weight: 600;
   margin-right: 24px;
-  color: rgba(0, 66, 37, 0.6980392157);
+  color: rgba(0, 66, 37, 0.7);
 }
 .body .faq-section .faq-content-wrapper .faq-content .answer {
   display: flex;
@@ -427,7 +437,7 @@ header .wrap .header-menu .normal-button:hover {
   font-size: 36px;
   font-weight: 600;
   margin-right: 24px;
-  color: rgba(0, 66, 37, 0.6980392157);
+  color: rgba(0, 66, 37, 0.7);
 }
 .body .faq-section .faq-content-wrapper .faq-content .answer .sub-text {
   font-size: 20px;
