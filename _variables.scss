@@ -1,8 +1,3 @@
-html,
-body {
-  font-family: 'Noto Sans JP', sans-serif;
-}
-
 // view point
 $pc: 1024px; // PC
 $tab: 1045px; // tablet
@@ -47,7 +42,7 @@ ul li{
 }
 
 .sp-none{
-  @include mq(sp) {
+  @include mq(tab) {
     display: none;
   }
 }
