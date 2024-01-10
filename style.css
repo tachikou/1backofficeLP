@@ -13,10 +13,6 @@ body, html {
   line-height: 1;
 }
 
-* {
-  outline: 2px solid blue;
-}
-
 header {
   background-color: #ffffff;
   font-size: 20px;
@@ -44,16 +40,14 @@ header .wrap {
   padding: 26px 38px;
 }
 header .wrap .icon-area {
-  margin-left: -20px;
   display: flex;
+  align-items: center;
 }
 header .wrap .icon-area .logo {
-  margin: 20px 0;
-  height: 70px;
+  height: 50px;
 }
 header .wrap .icon-area .title {
-  width: 162px;
-  height: 110px;
+  height: 165px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -138,13 +132,13 @@ header .wrap .header-menu .normal-button:hover {
 }
 .body .service-section {
   position: relative;
-  margin-top: 58px;
+  padding: 50px 0;
   width: 100%;
 }
 .body .service-section .title-wrapper {
   display: flex;
   justify-content: center;
-  margin-bottom: 88px;
+  padding: 50px 0;
 }
 .body .service-section .title-wrapper .title {
   color: #004225;
@@ -162,6 +156,7 @@ header .wrap .header-menu .normal-button:hover {
   width: 60%;
   height: 270px;
   border: 4px solid #004225;
+  padding: 0 40px;
 }
 .body .service-section .left-card .sub-title, .body .service-section .right-card .sub-title {
   font-size: 24px;
@@ -179,7 +174,6 @@ header .wrap .header-menu .normal-button:hover {
   font-weight: 300;
   width: 100%;
   overflow-wrap: break-word;
-  word-break: keep-all;
   line-height: 2rem;
   margin-top: 8px;
 }
@@ -194,29 +188,29 @@ header .wrap .header-menu .normal-button:hover {
 }
 .body .service-section .first-illustration {
   position: absolute;
-  top: 240px;
-  right: 240px;
+  top: 302px;
+  right: 50px;
 }
 .body .service-section .second-illustration {
+  width: 300px;
   position: absolute;
-  top: 630px;
-  left: 240px;
+  top: 580px;
+  left: 50px;
 }
 .body .service-section .third-illustration {
   position: absolute;
   bottom: 0;
-  right: 240px;
+  right: 50px;
 }
 .body .plan-section {
   background: #E5EDEC;
-  padding-top: 58px;
-  padding-bottom: 24px;
+  padding: 20px;
   width: 100%;
 }
 .body .plan-section .title-wrapper {
   display: flex;
   justify-content: center;
-  margin-bottom: 88px;
+  padding: 20px 0;
 }
 .body .plan-section .title-wrapper .title {
   color: #004225;
@@ -228,18 +222,17 @@ header .wrap .header-menu .normal-button:hover {
   border-right: 4px solid #004225;
 }
 .body .plan-section .plan-card-wrapper {
-  margin: auto;
-  margin-top: 72px;
+  padding: 20px 0;
   display: flex;
-  justify-content: space-between;
-  gap: 56px;
+  justify-content: center;
+  gap: 32px;
 }
 .body .plan-section .plan-card-wrapper .card {
   border: 4px solid #004225;
   border-radius: 30px;
   background: #fff;
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -254,7 +247,7 @@ header .wrap .header-menu .normal-button:hover {
   font-size: 32px;
 }
 .body .plan-section .plan-card-wrapper .card .plan-price {
-  font-size: 58px;
+  font-size: 40px;
   font-weight: 600;
 }
 .body .plan-section .plan-card-wrapper .card .plan-price:after {
@@ -269,11 +262,10 @@ header .wrap .header-menu .normal-button:hover {
   width: 260px;
   overflow-wrap: break-word;
   word-break: keep-all;
-  line-height: 2rem;
+  line-height: 1.5rem;
 }
 .body .plan-section .plan-description-card-wrapper {
-  margin: auto;
-  margin-top: 136px;
+  padding: 50px 0 20px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -283,10 +275,10 @@ header .wrap .header-menu .normal-button:hover {
   color: rgba(0, 66, 37, 0.7);
   background: #fff;
   display: flex;
+  margin-bottom: 20px;
   padding: 0 72px;
-  margin-bottom: 40px;
   justify-content: space-between;
-  width: 100%;
+  width: 960px;
   height: 280px;
   border: 2px solid #004225;
   border-radius: 30px;
@@ -323,7 +315,7 @@ header .wrap .header-menu .normal-button:hover {
   font-weight: 600;
   overflow-wrap: break-word;
   word-break: keep-all;
-  line-height: 2rem;
+  line-height: 1.5rem;
 }
 .body .plan-section .estimate-button {
   width: 240px;
@@ -383,13 +375,13 @@ header .wrap .header-menu .normal-button:hover {
 }
 .body .faq-section {
   background: #E5EDEC;
-  padding-top: 58px;
+  padding: 30px;
   width: 100%;
 }
 .body .faq-section .title-wrapper {
   display: flex;
   justify-content: center;
-  margin-bottom: 72px;
+  padding: 30px 0;
 }
 .body .faq-section .title-wrapper .title {
   color: #004225;
@@ -403,16 +395,20 @@ header .wrap .header-menu .normal-button:hover {
 .body .faq-section .faq-content-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  max-width: 1050px;
+  margin: 0 auto;
 }
 .body .faq-section .faq-content-wrapper .faq-content {
-  margin-bottom: 88px;
+  padding-bottom: 88px;
+  align-items: center;
 }
 .body .faq-section .faq-content-wrapper .faq-content .question {
   font-size: 24px;
   font-weight: 600;
   color: #004225;
   margin-bottom: 40px;
+  line-height: 2rem;
 }
 .body .faq-section .faq-content-wrapper .faq-content .question::before {
   content: "Q";
@@ -424,7 +420,7 @@ header .wrap .header-menu .normal-button:hover {
 .body .faq-section .faq-content-wrapper .faq-content .answer {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  line-height: 2rem;
 }
 .body .faq-section .faq-content-wrapper .faq-content .answer .main-text {
   font-size: 24px;
@@ -442,9 +438,8 @@ header .wrap .header-menu .normal-button:hover {
 .body .faq-section .faq-content-wrapper .faq-content .answer .sub-text {
   font-size: 20px;
   font-weight: 400;
-  width: 920px;
   overflow-wrap: break-word;
-  word-break: keep-all;
+  word-break: break-all;
   color: #004225;
   line-height: 2rem;
 }
@@ -472,7 +467,6 @@ header .wrap .header-menu .normal-button:hover {
   align-items: center;
 }
 .body .example-section .example-item-wrapper .example-item {
-  width: 960px;
   gap: 32px;
   display: flex;
   justify-content: center;
@@ -597,7 +591,6 @@ header .wrap .header-menu .normal-button:hover {
   gap: 20px;
 }
 .body .form-section .form-wapper {
-  width: 960px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -713,4 +706,550 @@ footer .footer-text {
   font-size: 12px;
   font-weight: 300;
   text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  header {
+    font-size: 14px;
+    height: 90px;
+  }
+  header .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  header .wrap .icon-area .logo {
+    height: 40px;
+  }
+  header .wrap .icon-area .title {
+    height: 120px;
+  }
+  header .wrap .header-menu {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  header .wrap .header-menu .vertical-line {
+    display: none;
+  }
+  header .wrap .header-menu .items {
+    display: none;
+  }
+  header .wrap .header-menu .normal-button {
+    padding: 16px 32px;
+  }
+  .body .hero-section {
+    height: 400px;
+  }
+  .body .hero-section .hero-wrapper {
+    gap: 10px;
+  }
+  .body .hero-section .hero-wrapper:before {
+    height: 400px;
+  }
+  .body .hero-section .hero-wrapper .logo {
+    margin-left: -40px;
+    width: 165px;
+  }
+  .body .hero-section .hero-wrapper .hero-contents {
+    margin-left: -40px;
+  }
+  .body .hero-section .hero-wrapper .hero-contents .company-name {
+    margin-left: -20px;
+    width: 240px;
+    height: 70px;
+  }
+  .body .hero-section .hero-wrapper .hero-contents .hero-text {
+    margin-top: 0px;
+    line-height: 1.5rem;
+    font-size: 12px;
+  }
+  .body .service-section {
+    position: relative;
+    padding: 50px 0 320px 0;
+    width: 100%;
+  }
+  .body .service-section .title-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  .body .service-section .title-wrapper .title {
+    color: #004225;
+    font-size: 24px;
+    width: 240px;
+    height: 32px;
+    text-align: center;
+    border-left: 3px solid #004225;
+    border-right: 3px solid #004225;
+  }
+  .body .service-section .left-card, .body .service-section .right-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    min-width: 360px;
+    height: 270px;
+    border: 4px solid #004225;
+    padding: 1em 2em;
+  }
+  .body .service-section .left-card .sub-title, .body .service-section .right-card .sub-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #004225;
+  }
+  .body .service-section .left-card .main-title, .body .service-section .right-card .main-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #004225;
+    margin-top: 8px;
+  }
+  .body .service-section .left-card .description, .body .service-section .right-card .description {
+    font-size: 14px;
+    font-weight: 300;
+    width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    line-height: 1.5rem;
+    margin-top: 8px;
+  }
+  .body .service-section .left-card {
+    border-left: none;
+    border-radius: 0 20px 20px 0;
+  }
+  .body .service-section .right-card {
+    margin: 300px 0 300px auto;
+    border-right: none;
+    border-radius: 20px 0 0 20px;
+  }
+  .body .service-section .first-illustration {
+    position: absolute;
+    z-index: -1;
+    top: 428px;
+    right: 50px;
+  }
+  .body .service-section .second-illustration {
+    width: 250px;
+    position: absolute;
+    top: 1000px;
+    left: 50px;
+  }
+  .body .service-section .third-illustration {
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+  }
+  .body .plan-section .title-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  .body .plan-section .title-wrapper .title {
+    color: #004225;
+    font-size: 24px;
+    width: 240px;
+    height: 32px;
+    text-align: center;
+    border-left: 3px solid #004225;
+    border-right: 3px solid #004225;
+  }
+  .body .plan-section .plan-card-wrapper {
+    display: none;
+  }
+  .body .plan-section .plan-description-card-wrapper {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .body .plan-section .plan-description-card-wrapper .description-card {
+    color: rgba(0, 66, 37, 0.7);
+    background: #fff;
+    display: flex;
+    margin-bottom: 20px;
+    padding: 20px;
+    justify-content: space-between;
+    width: 100%;
+    height: 280px;
+    border: 2px solid #004225;
+    border-radius: 30px;
+  }
+  .body .plan-section .plan-description-card-wrapper .description-card .spaces {
+    display: none;
+  }
+  .body .plan-section .plan-description-card-wrapper .description-card .contents {
+    width: 100%;
+  }
+  .body .plan-section .plan-description-card-wrapper .description-card .contents .plan-name {
+    text-align: center;
+    font-size: 24px;
+  }
+  .body .plan-section .plan-description-card-wrapper .description-card .contents .plan-price {
+    text-align: center;
+    padding: 16px 0 8px;
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .body .plan-section .plan-description-card-wrapper .description-card .contents .plan-price::after {
+    content: "円";
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 4px;
+  }
+  .body .plan-section .plan-description-card-wrapper .description-card .contents .plan-description {
+    font-size: 16px;
+    font-weight: 600;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    text-align: left;
+    line-height: 1.5rem;
+  }
+  .body .plan-section .estimate-button {
+    width: 240px;
+    height: 56px;
+    background: #fff;
+    border: 2px solid #004225;
+    color: #004225;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    display: block;
+    text-align: center;
+    line-height: 55px;
+    margin: auto;
+  }
+  .body .plan-section .estimate-button .allow {
+    margin-left: 8px;
+  }
+  .body .common-section {
+    padding: 50px 20px;
+    width: 100%;
+  }
+  .body .common-section .title-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  .body .common-section .title-wrapper .title {
+    color: #004225;
+    font-size: 24px;
+    width: 240px;
+    height: 32px;
+    text-align: center;
+    border-left: 3px solid #004225;
+    border-right: 3px solid #004225;
+  }
+  .body .common-section .contents-wrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 40px;
+  }
+  .body .common-section .contents-wrapper .content {
+    width: 100%;
+  }
+  .body .common-section .contents-wrapper .content img {
+    width: 100%;
+    height: 100%;
+    border: 4px solid #004225;
+    border-radius: 20px;
+  }
+  .body .common-section .contents-wrapper .content .text {
+    padding: 20px 0;
+    font-size: 20px;
+    color: #004225;
+    font-weight: 600;
+    line-height: 1.5rem;
+  }
+  .body .faq-section {
+    background: #E5EDEC;
+    padding: 30px;
+    width: 100%;
+  }
+  .body .faq-section .title-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  .body .faq-section .title-wrapper .title {
+    color: #004225;
+    font-size: 24px;
+    width: 240px;
+    height: 32px;
+    text-align: center;
+    border-left: 3px solid #004225;
+    border-right: 3px solid #004225;
+  }
+  .body .faq-section .faq-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1050px;
+    margin: 0 auto;
+  }
+  .body .faq-section .faq-content-wrapper .faq-content {
+    padding-bottom: 40px;
+    align-items: center;
+  }
+  .body .faq-section .faq-content-wrapper .faq-content .question {
+    font-size: 20px;
+    font-weight: 600;
+    color: #004225;
+    padding: 20px 0;
+    margin: 0;
+    line-height: 2rem;
+  }
+  .body .faq-section .faq-content-wrapper .faq-content .question::before {
+    content: "Q";
+    font-size: 32px;
+    font-weight: 600;
+    margin-right: 24px;
+    color: rgba(0, 66, 37, 0.7);
+  }
+  .body .faq-section .faq-content-wrapper .faq-content .answer {
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+  }
+  .body .faq-section .faq-content-wrapper .faq-content .answer .main-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: #004225;
+    margin-bottom: 20px;
+  }
+  .body .faq-section .faq-content-wrapper .faq-content .answer .main-text::before {
+    content: "A";
+    font-size: 32px;
+    font-weight: 600;
+    margin-right: 24px;
+    color: rgba(0, 66, 37, 0.7);
+  }
+  .body .faq-section .faq-content-wrapper .faq-content .answer .sub-text {
+    font-size: 14px;
+    font-weight: 400;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    color: #004225;
+    line-height: 1.5rem;
+  }
+  .body .example-section {
+    color: #004225;
+    padding: 30px 20px;
+  }
+  .body .example-section .title-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  .body .example-section .title-wrapper .title {
+    color: #004225;
+    font-size: 24px;
+    width: 240px;
+    height: 32px;
+    text-align: center;
+    border-left: 3px solid #004225;
+    border-right: 3px solid #004225;
+  }
+  .body .example-section .example-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .body .example-section .example-item-wrapper .example-item {
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+  }
+  .body .example-section .example-item-wrapper .example-item .img-wrap {
+    width: 100%;
+    height: 100%;
+  }
+  .body .example-section .example-item-wrapper .example-item .img-wrap img {
+    width: 100%;
+    height: 100%;
+    border: 3px solid #004225;
+    border-radius: 20px;
+  }
+  .body .example-section .example-item-wrapper .example-item .contents {
+    width: 100%;
+    height: 100%;
+  }
+  .body .example-section .example-item-wrapper .example-item .contents .company-name {
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 20px;
+  }
+  .body .example-section .example-item-wrapper .example-item .contents .description {
+    font-size: 20px;
+    font-weight: 400;
+    word-break: break-all;
+    line-height: 2rem;
+  }
+  .body .example-section .estimate-button {
+    width: 240px;
+    height: 56px;
+    background: #fff;
+    border: 2px solid #004225;
+    color: #004225;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    display: block;
+    text-align: center;
+    line-height: 55px;
+  }
+  .body .example-section .estimate-button .allow {
+    margin-left: 8px;
+  }
+  .body .flow-section {
+    background-image: url("img/image-2.png");
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
+  .body .flow-section .flow-wrapper {
+    width: 75%;
+    max-width: 1200px;
+    align-items: center;
+    background-color: #ffffff;
+    margin: 0 auto;
+  }
+  .body .flow-section .flow-wrapper:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    content: "";
+    width: 100%;
+    -webkit-backdrop-filter: blur(3px) brightness(0.5);
+            backdrop-filter: blur(3px) brightness(0.5);
+  }
+  .body .flow-section .flow-wrapper .flow-contents {
+    color: #004225;
+  }
+  .body .flow-section .flow-wrapper .flow-contents .flow-header {
+    background-color: #E5EDEC;
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  .body .flow-section .flow-wrapper .flow-contents .flow-item {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 50px 10px;
+  }
+  .body .flow-section .flow-wrapper .flow-contents .flow-item.last-item {
+    padding: 50px 0 100px 0;
+  }
+  .body .flow-section .flow-wrapper .flow-contents .flow-item .flow-num {
+    font-size: 32px;
+    width: 30px;
+  }
+  .body .flow-section .flow-wrapper .flow-contents .flow-item .flow-title {
+    font-size: 32px;
+    width: 200px;
+  }
+  .body .flow-section .flow-wrapper .flow-contents .flow-item .flow-body {
+    font-size: 20px;
+    width: 600px;
+    word-break: break-all;
+  }
+  .body .form-guide {
+    background-color: #004225;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 32px;
+  }
+  .body .form-section {
+    padding: 50px 20px;
+    font-size: 20px;
+    background-color: #E5EDEC;
+    align-items: center;
+    gap: 20px;
+  }
+  .body .form-section .form-wapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .body .form-section .form-wapper.pp-area {
+    justify-content: center;
+    gap: 10px;
+  }
+  .body .form-section .form-wapper .title-wrapper {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .body .form-section .form-wapper .title-wrapper .required {
+    color: #ffffff;
+    background-color: #004225;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #004225;
+    border-radius: 10px;
+  }
+  .body .form-section .form-wapper .title-wrapper .optional {
+    color: #004225;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 10px;
+  }
+  .body .form-section .form-wapper .title-wrapper input[type=text] {
+    width: 200px;
+    height: 20px;
+    padding: 3px;
+    background-color: #ffffff;
+    border: 1px solid #000;
+  }
+  .body .form-section .form-wapper .title-wrapper .form {
+    width: 200px;
+    height: 20px;
+    padding: 3px;
+    background-color: #ffffff;
+    border: 1px solid #000;
+  }
+  .body .form-section input [type=checkbox] {
+    width: 30px;
+    height: 30px;
+  }
+  .body .form-section .normal-button {
+    background-color: #004225;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 16px 48px;
+    letter-spacing: 0.02em;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .body .form-section .normal-button:hover {
+    background-color: #005c33;
+  }
+  footer {
+    background-color: #E5EDEC;
+    color: #004225;
+  }
+  footer .wrap {
+    display: none;
+  }
+  footer .footer-text {
+    padding: 5px;
+    font-size: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */
