@@ -1,25 +1,7 @@
-// view point
-$pc: 1024px; // PC
-$tab: 1045px; // tablet
-$sp: 767px; // SP
-$mini-sp: 375px;
-
-$breakpoint: (
-    mini-sp: 'screen and (max-width: 375px)',
-    sp: 'screen and (max-width: 767px)',
-    tab: 'screen and (max-width: 1024px)',
-    pc: 'screen and (min-width: 1025px)',
-);
-
-@mixin mq($bp) {
-  @media #{map-get($breakpoint, $bp)} {
-    @content;
-  }
-}
-
 // color
 $color-black: #323232;
 $color-white: #ffffff;
+$color-gray: #aaaaaa;
 
 $color-green: #004225;
 $color-light-green: #E5EDEC;
@@ -35,15 +17,3 @@ $box-shadow: 0px 3px 6px 0 rgba(85, 85, 85, 0.11);
 // letter-spacing
 $letter4: 0.04em;
 $letter2: 0.02em;
-
-
-ul li{
-  list-style:none;
-}
-
-.sp-none{
-  @include mq(tab) {
-    display: none;
-  }
-}
-  

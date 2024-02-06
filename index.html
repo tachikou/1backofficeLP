@@ -5,33 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>1backoffice</title>
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./spstyle.scss" />
     <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
-    
   </head>
   <body>
     <!-- <div class="screen"> -->
       <!-- header -->
       <header class="header">
         <div class="wrap">
-          <div class="icon-area">
+          <a href="#" class="icon-area">
             <img class="logo" src="img/logo/logo_normal.svg" />
             <img class="title" src="img/logo/logo_normal_text.svg" />
-          </div>
+          </a>
           <div class="header-menu">
-            <p class="items sp-none">サービス</p>
-            <div class="vertical-line sp-none"></div>
-            <p class="items sp-none">料金・プラン</p>
-            <div class="vertical-line sp-none"></div>
-            <p class="items sp-none">ご利用の流れ</p>
-            <button class="normal-button">お問い合わせ</button>
+              <!-- SPの時は非表示 -->
+              <a href="#service" class="items">サービス</a>
+              <div class="vertical-line"></div>
+              <a href="#plan" class="items">料金・プラン</a>
+              <div class="vertical-line"></div>
+              <a href="#flow" class="items">ご利用の流れ</a>
+              <a href="#contact" class="normal-button">お問い合わせ</a>
+              <!-- ここまで -->
+              <!-- PCの時は非表示 -->
+              <label class="hamburger-button-wrapper">
+                <input type="checkbox" id="hamburger-input">
+                <div class="hamburger-button"></div>
+                <div class="hamburger-menu">
+                  <a href="#service" class="hamburger-item">サービス</a>
+                  <a href="#plan" class="hamburger-item">料金・プラン</a>
+                  <a href="#flow" class="hamburger-item">ご利用の流れ</a>
+                  <a href="#contact" class="hamburger-normal-button">お問い合わせ</a>
+                </div>
+              </label>
+              <!-- ここまで -->
           </div>
         </div>
       </header>
 
       <!-- body -->
       <div class="body">
-        <div class="hero-section">
+        <div class="hero-section" id="top">
           <div class="hero-wrapper">
             <img class="logo" src="img/logo/logo_white.svg">
             <div class="hero-contents">
@@ -43,7 +55,7 @@
             </div>
           </div>
         </div>
-        <div class="service-section">
+        <div class="service-section" id="service">
           <div class="title-wrapper">
             <div class="title">サービス</div>
           </div>
@@ -78,7 +90,7 @@
           </div>
           <img src="img/undraw-connecting-teams-re-hno7-1-1.svg" class="third-illustration">
         </div>
-        <div class="plan-section">
+        <div class="plan-section" id="plan">
           <div class="title-wrapper">
             <div class="title">料金・プラン</div>
           </div>
@@ -131,7 +143,7 @@
               </span>
             </div>
           </div>
-          <a class="estimate-button">
+          <a class="estimate-button" href="#contact">
             無料お見積り
             <img src="img/vector.svg" class="allow">
           </a>
@@ -218,13 +230,13 @@
                 </p>
               </div>
             </div>
-            <a class="estimate-button">
+            <a class="estimate-button" href="#contact">
               無料お見積り
               <img src="img/vector.svg" class="allow">
             </a>
           </div>
         </div>
-        <div class="flow-section">
+        <div class="flow-section" id="flow">
           <div class="flow-wrapper">
             <div class="flow-contents">
               <div class="flow-header">ご利用の流れ</div>
@@ -246,88 +258,120 @@
             </div>
           </div>
         </div>
-        <div class="form-guide">
+        <div class="form-guide" id="contact">
           <p class="text">まずはお問い合わせ！</p>
         </div>
         <div class="form-section">
-          <div class="form-wapper">
-            <div class="title-wrapper">
-              <div class="title">お名前</div>
-              <div class="required">必須</div>
+          <form action="送信先のURL">
+            <div class="form-content">
+              <label>
+                <div class="form-label-wrap">
+                  <div class="title-text">名前</div>
+                  <div class="required-text">必須</div>
+                </div>
+                <input type="text" name="name" placeholder="名前を入力して下さい">
+              </label>
             </div>
-            <div class="form">
-              <input type="text" placeholder="名前を入力して下さい"></input>
+            <div class="form-content">
+              <label>
+                <div class="form-label-wrap">
+                  <div class="title-text">会社名</div>
+                  <div class="required-text optional">任意</div>
+                </div>
+                <input type="text" name="company-name" placeholder="会社名を入力して下さい">
+              </label>
             </div>
-          </div>
-          <div class="form-wapper">
-            <div class="title-wrapper">
-              <div class="title">会社名</div>
-              <div class="optional">任意</div>
+            <div class="form-content">
+              <label>
+                <div class="form-label-wrap">
+                  <div class="title-text">メールアドレス</div>
+                  <div class="required-text">必須</div>
+                </div>
+                <input type="email" name="email" placeholder="メールアドレスを入力して下さい">
+              </label>
             </div>
-            <div class="form">
-              <input type="text" placeholder="会社名を入力して下さい"></input>
+            <div class="form-content">
+              <label>
+                <div class="form-label-wrap">
+                  <div class="title-text">お問い合わせ内容</div>
+                  <div class="required-text">必須</div>
+                </div>
+                <!-- TODO: selectタグにスタイル適用させる -->
+                <div class="content-selector">
+                  <select name="content" required>
+                    <i class="fa-solid fa-sort-down"></i>
+                    <option value="" class="initial-option">お問い合わせ内容を選択して下さい</option>
+                    <option value="1">選択肢1</option>
+                    <option value="2">選択肢2</option>
+                    <option value="3">選択肢3</option>
+                  </select>
+                </div>
+              </label>
             </div>
-          </div>
-          <div class="form-wapper">
-            <div class="title-wrapper">
-              <div class="title">メールアドレス</div>
-              <div class="required">必須</div>
+            <div class="form-content">
+              <label>
+                <div class="form-label-wrap">
+                  <div class="title-text">詳細</div>
+                  <div class="required-text optional">任意</div>
+                </div>
+                <textarea name="detail" placeholder="お問い合わせ内容を詳細に教えて下さい"></textarea>
+              </label>
             </div>
-            <input class="form" type="text" placeholder="メールアドレスを入力して下さい"></input>
-          </div>
-          <div class="form-wapper">
-            <div class="title-wrapper">
-              <div class="title">お問い合わせ内容</div>
-              <div class="required">必須</div>
+            <div class="required-content">
+              <label class="required-content">
+                <input type="checkbox" name="consent">
+                <div class="consent-text">当社の<a>プライバシーポリシー</a>に同意する</div>
+              </label>
             </div>
-            <div class="form">
-              <input type="text" placeholder="お問い合わせ内容を選択して下さい"></input>
-            </div>
-          </div>
-          <div class="form-wapper">
-            <div class="title-wrapper">
-              <div class="title">詳細</div>
-              <div class="optional">任意</div>
-            </div>
-            <div class="form">
-              <textarea type="text" placeholder="お問い合わせ内容を詳細に教えて下さい。"></textarea>
-            </div>
-          </div>
-          <div class="form-wapper pp-area">
-            <input type="checkbox" id="name">
-            <label for="name">当社の<a class="pp">プライバシーポリシー</a>に同意する</label>
-          </div>
-          <button class="normal-button">送信</button>
-        </div> 
+            <button class="submit-button" type="submit">送信</button>
+          </form>
+        </div>
       </div>
 
       <!-- footer -->
       <footer>
         <div class="wrap">
-            <div class="footer-item page-guide sp-none">
-              <div class="sp-none">
-                <p class="page-guide-item sp-none">サービス</p>
-                <p class="page-guide-item sp-none">料金・プラン</p>
-                <p class="page-guide-item sp-none">ご利用の流れ</p>
+            <div class="footer-item page-guide">
+              <div class="guide-wrapper">
+                <a href="#service" class="page-guide-item">サービス</a>
+                <a href="#plan" class="page-guide-item">料金・プラン</a>
+                <a href="#flow" class="page-guide-item">ご利用の流れ</a>
               </div>
-              <div class="sp-none">
-                <p class="page-guide-item sp-none">お問い合わせ</p>
-                <p class="page-guide-item sp-none">texttexttexttext</p>
-                <p class="page-guide-item sp-none">texttexttext</p>
+              <div class="guide-wrapper">
+                <a href="#contact" class="page-guide-item">お問い合わせ</a>
+                <a class="page-guide-item">texttexttexttext</a>
+                <a class="page-guide-item">texttexttext</a>
               </div>
             </div>
             <div class="footer-item logo-area">
               <img class="logo" src="img/logo/logo_white.svg">
             </div>
             <div class="footer-item company-info">
-              <p class="company-info-item company-name">1backoffice合同会社</p>
-              <p class="company-info-item">神奈川県相模原市緑区西橋本5-4-21<br />SIC-1 1312号室</p>
-              <p class="company-info-item">代表 岩崎 奈緒己</p>
-              <p class="company-info-item">設立 2023年5月1日</p>
+              <div class="info-wapper">
+                <p class="company-info-item company-name">1backoffice合同会社</p>
+                <p class="company-info-item">神奈川県相模原市緑区西橋本5-4-21<br />SIC-1 1312号室</p>
+                <p class="company-info-item">代表 岩崎 奈緒己</p>
+                <p class="company-info-item">設立 2023年5月1日</p>
+              </div>
             </div>
         </div>
         <div class="footer-text">Copyright 2023 1backoffice LLC</div>
       </footer>
     <!-- </div> -->
   </body>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('.hamburger-menu a');
+      const checkbox = document.getElementById('hamburger-input');
+
+      links.forEach((link) => {
+        link.addEventListener('click', () => {
+          if (checkbox.checked) {
+            checkbox.checked = false;
+          }
+        });
+      });
+    });
+  </script>
 </html>

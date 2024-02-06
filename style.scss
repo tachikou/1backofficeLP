@@ -3,12 +3,18 @@
 
 body, html {
   line-height: 1;
+  scroll-padding-top: 110px;
 }
 
-header {
-  @media screen and (max-width: 767px) {
-    color: red;
-  }
+a {
+  text-decoration: none;
+}
+
+ul li{
+  list-style:none;
+}
+
+.header {
   background-color: var.$color-white;
   font-size: 20px;
   width: 100vw;
@@ -32,11 +38,15 @@ header {
       align-items: center;
       .logo {
         height: 50px;
+        padding-right: 20px;
       }
       .title {
         height: 165px;
         object-fit: cover;
       }
+    }
+    a {
+      text-decoration: none;
     }
     .header-menu {
       display: flex;
@@ -67,6 +77,12 @@ header {
         &:hover {
           background-color: lighten(var.$color-green, 5%);
         }
+      }
+      .hamburger-button-wrapper {
+        display: none;
+      }
+      .hamburger-menu {
+        display: none;
       }
     }
   }
@@ -103,6 +119,7 @@ header {
         height: 300px;
       }
       .hero-contents {
+        margin-left: 40px;
         .company-name {
           margin-left: -40px;
           width: 475px;
@@ -604,8 +621,7 @@ header {
         
       }
     }
-  }
-  
+  }  
   .form-guide {
     background-color: var.$color-green;
     color: var.$color-white;
@@ -617,64 +633,134 @@ header {
     padding: 50px 20px;
     font-size: 20px;
     background-color: #E5EDEC;
-    align-items: center;
-    display:flex;
-    flex-flow: column;
-    gap: 20px;
-    .form-wapper {
+
+    form {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 0;
-      &.pp-area {
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    .form-content {
+      label {
+        display: flex;
         justify-content: center;
-        gap: 10px;
+        gap: 20px;
       }
-      .title-wrapper {
-        width: 300px;
+
+      .content-selector {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 420px;
+        height: 50px;
+        padding: 3px 10px;
+        background-color: var.$color-white;
+        border: 2px solid var.$color-gray;
+        border-radius: 10px;
+
+        select {
+          &:invalid {
+            color: var.$color-gray;
+          }
+        }
+
+        &:focus {
+          border: 3px solid var.$color-green;
+        }
+
+        &::after {
+          content: "▼";
+          font-size: 16px;
+          color: var.$color-green;
+          position: absolute;
+          width: 20px;
+          height: 16px;
+          right: 16px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      input[type="text"], input[type="email"] {
+        width: 420px;
+        height: 50px;
+        padding: 3px 10px;
+        background-color: var.$color-white;
+        border: 2px solid var.$color-gray;
+        border-radius: 10px;
+        &:focus {
+          border: 3px solid var.$color-green;
+        }
+      }
+      textarea {
+        width: 420px;
+        height: 200px;
+        padding: 5px 10px;
+        background-color: var.$color-white;
+        border: 2px solid var.$color-gray;
+        border-radius: 10px;
+        &:focus {
+          border: 3px solid var.$color-green;
+        }
+      }
+
+      input[type="text"], input[type="email"], textarea {
+        &::placeholder {
+          color: var.$color-gray;
+        }
+      }
+
+      .form-label-wrap {
+        width: 250px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        // .title {
-
-        // }
-        .required {
+        text-align: center;
+        .title-text {
+          text-align: center;
+        }
+        .required-text {
+          font-size: 16px;
           color: var.$color-white;
           background-color: var.$color-green;
           text-align: center;
-          padding: 10px;
+          padding: 8px;
           border: 2px solid var.$color-green;
           border-radius: 10px;
-        }
-        .optional {
-          color: var.$color-green;
-          background-color: var.$color-white;
-          text-align: center;
-          padding: 10px;
-          border: 2px solid #000;
-          border-radius: 10px;
-        }
-        input[type="text"] {
-          width: 200px;
-          height: 20px;
-          padding: 3px;
-          background-color: var.$color-white;
-          border: 1px solid #000;
-        }
-        .form {
-          width: 200px;
-          height: 20px;
-          padding: 3px;
-          background-color: var.$color-white;
-          border: 1px solid #000;
+          &.optional {
+            color: var.$color-green;
+            background-color: var.$color-white;
+            border: 2px solid var.$color-green;
+          }
         }
       }
     }
-    input [type = "checkbox"] {
-      width: 30px;
-      height: 30px;
+
+    // チェックボックスのとこ
+    .required-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      label {
+      }
+
+      input[type="checkbox"] {
+        width: 25px;
+        height: 25px;
+        border-radius: 10px;
+      }
+      a {
+        font-weight: 600;
+        color: var.$color-green;
+        text-decoration: none;
+      }
+      .consent-text {
+      }
     }
-    .normal-button {
+
+    .submit-button {
+      margin: 0 auto;
       background-color: var.$color-green;
       color: var.$color-white;
       border-radius: 6px;
@@ -696,40 +782,49 @@ footer {
   width: 100%;
   padding: 20px;
   .wrap {
-    padding: 20px;
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 20px;
     align-items: center;
     .footer-item {
-      width: 550px;
+      display: flex;
+      width: 450px;
+      padding: 0 30px;
       &.page-guide {
-        display: flex;
         justify-content: end;
         gap: 80px;
       }
       &.logo-area {
         width: auto;
       }
-      // &.company-info {
-
-      // }
+      &.company-info {
+      }
+    }
+    .guide-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
       .page-guide-item {
-        font-size: 20px;
+        font-size: 14px;
+        padding: 10px 0;
         font-weight: 300;
         cursor: pointer;
         &:hover {
           color: lighten(var.$color-white, 10%);
         }
       }
-      .page-guide-item {
-        font-size: 14px;
-        padding: 10px 0;
+      a {
+        color: var.$color-white;
+        text-decoration: none;
       }
-      .logo {
-        width: 150px;
-        height: 150px;
-      }
+    }
+    .logo {
+      width: 150px;
+      height: 150px;
+    }
+    .info-wapper {
+      display: flex;
+      flex-direction: column;
       .company-info-item {
         font-size: 14px;
         padding: 8px 0;
@@ -738,6 +833,7 @@ footer {
         }
       }
     }
+    
   }
   .footer-text {
       padding: 10px;
@@ -748,7 +844,7 @@ footer {
 }
 
 @include m.sp {
-  header {
+  .header {
     font-size: 14px;
     height: 90px;
     .wrap {
@@ -759,6 +855,7 @@ footer {
       .icon-area{
         .logo {
           height: 40px;
+          padding: 0  5px 0 20px;
         }
         .title {
           height: 120px;
@@ -775,7 +872,107 @@ footer {
           display: none;
         }
         .normal-button {
-          padding: 16px 32px;
+          display: none;
+        }
+        .hamburger-button-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 8px;
+          height: 32px;
+          width: 32px;
+          
+          input[type="checkbox"] {
+            display: none;
+
+            &:checked ~ .hamburger-button {
+              background-color: transparent;
+
+              &::before {
+                top:0;
+                transform: rotate(45deg);
+              }
+
+              &::after {
+                bottom:0;
+                transform: rotate(-45deg);
+              }
+            }
+
+            &:checked ~ .hamburger-menu {
+              left: 0;
+            }
+          }
+          
+          .hamburger-button {
+            z-index: 2;
+            background-color: var.$color-green;
+            width: 32px;
+            height: 4px;
+            border-radius: 5px;
+            position: relative;
+            
+            &::before, &::after {
+              transition: all .5s;
+              position: absolute;
+              display: block;
+              background-color: var.$color-green;
+              content: "";
+              width: 32px;
+              height: 4px; 
+              border-radius: 5px;
+            }        
+
+            &::before {
+              top: -10px;
+            }
+
+            &::after {
+              bottom: -10px;
+            }
+          }
+
+          .hamburger-menu {
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+            padding: 100px 48px;
+            position: fixed;
+            left: 100vw;
+            top: 0;
+            background-color: rgba(var.$color-white, .95);
+            width: 100vw;
+            height: 100vh;
+            transition: all .5s;
+
+            .hamburger-item {
+              text-decoration: none;
+              display: block;
+              height: 40px;
+              width: 100%;
+              color: var.$color-green;
+              font-size: 24px;
+              font-weight: 600;
+            }
+  
+            .hamburger-normal-button{
+              display: inline-block;
+              text-align: center;
+              background-color: var.$color-green;
+              color: var.$color-white;
+              border-radius: 6px;
+              padding: 16px 0;
+              letter-spacing: 0.02em;
+              font-size: 20px;
+              border: none;
+              cursor: pointer;
+              transition: all 0.3s ease;
+              &:hover {
+                background-color: lighten(var.$color-green, 5%);
+              }
+            }
+          }
         }
       }
     }
@@ -790,11 +987,11 @@ footer {
           height: 400px;
         }
         .logo {
-          margin-left: -40px;
-          width: 165px;
+          margin-left: 20px;
+          width: 60px;
         }
         .hero-contents {
-          margin-left: -40px;
+          margin-left: 20px;
           .company-name {
             margin-left: -20px;
             width: 240px;
@@ -1191,28 +1388,13 @@ footer {
       }
     }
     .flow-section {
-      background-image: url("img/image-2.png");
-      background-size: cover;
+      background: none;
       position: relative;
-      overflow: hidden;
       width: 100%;
-      object-fit: cover;
-      backdrop-filter: blur(10px);
       .flow-wrapper {
-        width: 75%;
-        max-width: 1200px;
-        align-items: center;
+        width: 100%;
         background-color: var.$color-white;
         margin: 0 auto;
-        &:before {
-          position: absolute;
-          top: 0;
-          left: 0;
-          z-index: -1;
-          content: "";
-          width: 100%;
-          backdrop-filter: blur(3px) brightness(0.5);
-        }
         .flow-contents {
           color: var.$color-green;
           .flow-header {
@@ -1225,6 +1407,7 @@ footer {
           .flow-item {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             gap: 16px;
             padding: 50px 10px;
             &.last-item {
@@ -1232,11 +1415,11 @@ footer {
             }
             .flow-num {
               font-size: 32px;
-              width: 30px;
+              width: 10%;
             }
             .flow-title {
               font-size: 32px;
-              width: 200px;
+              width: calc(90% - 40px);
             }
             .flow-body {
               font-size: 20px;
@@ -1244,11 +1427,10 @@ footer {
               word-break: break-all;
             }
           }
-
+          
         }
       }
-    }
-
+    }  
     .form-guide {
       background-color: var.$color-green;
       color: var.$color-white;
@@ -1260,61 +1442,94 @@ footer {
       padding: 50px 20px;
       font-size: 20px;
       background-color: #E5EDEC;
-      align-items: center;
 
-      gap: 20px;
-      .form-wapper {
+      form {
         display: flex;
         flex-direction: column;
-        &.pp-area {
+        gap: 10px;
+      }
+
+      .form-content {
+        padding: 5px 0;
+        label {
+          display: flex;
+          flex-flow: column;
           justify-content: center;
-          gap: 10px;
+          gap: 3px 0;
         }
-        .title-wrapper {
-          width: 300px;
+
+        .content-selector {
+          width: auto;
+        }
+
+        input[type="text"], input[type="email"] {
+          width: 100%;
+          height: 50px;
+          padding: 3px 10px;
+          background-color: var.$color-white;
+          border: 2px solid var.$color-gray;
+          border-radius: 10px;
+        }
+        textarea {
+          width: 100%;
+          height: 200px;
+          padding: 5px 10px;
+          background-color: var.$color-white;
+          border: 2px solid var.$color-gray;
+          border-radius: 10px;
+        }
+        .form-label-wrap {
+          width: 100%;
           display: flex;
           justify-content: space-between;
           align-items: center;
-          // .title {
-
-          // }
-          .required {
+          text-align: center;
+          padding: 0 3px;
+          .title-text {
+            text-align: center;
+          }
+          .required-text {
+            font-size: 14px;
             color: var.$color-white;
             background-color: var.$color-green;
             text-align: center;
-            padding: 10px;
+            padding: 8px;
             border: 2px solid var.$color-green;
             border-radius: 10px;
-          }
-          .optional {
-            color: var.$color-green;
-            background-color: var.$color-white;
-            text-align: center;
-            padding: 10px;
-            border: 2px solid #000;
-            border-radius: 10px;
-          }
-          input[type="text"] {
-            width: 200px;
-            height: 20px;
-            padding: 3px;
-            background-color: var.$color-white;
-            border: 1px solid #000;
-          }
-          .form {
-            width: 200px;
-            height: 20px;
-            padding: 3px;
-            background-color: var.$color-white;
-            border: 1px solid #000;
+            &.optional {
+              color: var.$color-green;
+              background-color: var.$color-white;
+              border: 2px solid var.$color-green;
+            }
           }
         }
       }
-      input [type = "checkbox"] {
-        width: 30px;
-        height: 30px;
+
+      // チェックボックスのとこ
+      .required-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        font-size: 14px;
+        label {
+        }
+
+        input[type="checkbox"] {
+          width: 20px;
+          height: 20px;
+          border-radius: 10px;
+        }
+        a {
+          font-weight: 600;
+          color: var.$color-green;
+          text-decoration: none;
+        }
+        .consent-text {
+        }
       }
-      .normal-button {
+      .submit-button {
+        margin-top: 20px;
         background-color: var.$color-green;
         color: var.$color-white;
         border-radius: 6px;
@@ -1331,10 +1546,43 @@ footer {
   }
 
   footer {
-    background-color: var.$color-light-green;
-    color: var.$color-green;
+    // background-color: var.$color-light-green;
+    // color: var.$color-green;
     .wrap {
-      display: none;
+      width: 300px;
+      margin: 0 auto;
+      .footer-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        gap: 0;
+        margin: 0 auto;
+        &.page-guide {
+          display: none;
+        }
+        &.logo-area {
+          padding: 0;
+          width: auto;
+          .logo {
+            width: 40px;
+          }
+        }
+        &.company-info {
+          margin: 0;
+          width: 200px;
+          color: var.$color-white;
+          .company-info-item {
+            font-size: 12px;
+            padding: 5px 0;
+            font-weight: 300;
+            &.company-name {
+              font-weight: 500;
+            }
+          }
+        }
+      }
     }
     .footer-text {
       padding: 5px;
