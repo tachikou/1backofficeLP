@@ -298,8 +298,7 @@
                 </div>
                 <!-- TODO: selectタグにスタイル適用させる -->
                 <div class="content-selector">
-                  <select name="content" required>
-                    <i class="fa-solid fa-sort-down"></i>
+                  <select id="selector-for-content" name="content" required>
                     <option value="" class="initial-option">お問い合わせ内容を選択して下さい</option>
                     <option value="1">選択肢1</option>
                     <option value="2">選択肢2</option>
@@ -361,6 +360,16 @@
   </body>
 
   <script>
+    const selectWrapper = document.getElementsByClassName('content-selector')[0];
+    const selector = document.getElementById('selector-for-content');
+    selector.addEventListener('click', () => {
+      selectWrapper.classList.add('focus');
+    });
+
+    selector.addEventListener('blur', () => {
+      selectWrapper.classList.remove('focus');
+    });
+
     document.addEventListener('DOMContentLoaded', () => {
       const links = document.querySelectorAll('.hamburger-menu a');
       const checkbox = document.getElementById('hamburger-input');

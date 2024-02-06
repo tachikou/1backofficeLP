@@ -653,19 +653,17 @@ ul li{
         position: relative;
         width: 420px;
         height: 50px;
-        padding: 3px 10px;
         background-color: var.$color-white;
         border: 2px solid var.$color-gray;
         border-radius: 10px;
 
         select {
+          width: 100%;
+          height: 100%;
+          margin: 3px 10px;
           &:invalid {
             color: var.$color-gray;
           }
-        }
-
-        &:focus {
-          border: 3px solid var.$color-green;
         }
 
         &::after {
@@ -679,6 +677,10 @@ ul li{
           top: 50%;
           transform: translateY(-50%);
         }
+      }
+
+      .content-selector.focus {
+        border: 3px solid var.$color-green;
       }
 
       input[type="text"], input[type="email"] {
@@ -1460,6 +1462,9 @@ footer {
 
         .content-selector {
           width: auto;
+          background-color: var.$color-white;
+          border: 2px solid var.$color-gray;
+          border-radius: 10px;
         }
 
         input[type="text"], input[type="email"] {
