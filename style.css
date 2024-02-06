@@ -2,6 +2,7 @@
 body, html {
   line-height: 1;
   scroll-padding-top: 110px;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 a {
@@ -617,6 +618,7 @@ ul li {
   width: 100%;
   height: 100%;
   margin: 3px 10px;
+  outline: none;
 }
 .body .form-section .form-content .content-selector select:invalid {
   color: #aaaaaa;
@@ -636,6 +638,7 @@ ul li {
   border: 3px solid #004225;
 }
 .body .form-section .form-content input[type=text], .body .form-section .form-content input[type=email] {
+  outline: none;
   width: 420px;
   height: 50px;
   padding: 3px 10px;

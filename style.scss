@@ -4,6 +4,7 @@
 body, html {
   line-height: 1;
   scroll-padding-top: 110px;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 a {
@@ -661,6 +662,7 @@ ul li{
           width: 100%;
           height: 100%;
           margin: 3px 10px;
+          outline: none;
           &:invalid {
             color: var.$color-gray;
           }
@@ -684,6 +686,7 @@ ul li{
       }
 
       input[type="text"], input[type="email"] {
+        outline: none;
         width: 420px;
         height: 50px;
         padding: 3px 10px;
