@@ -1,5 +1,6 @@
 @charset "UTF-8";
-body, html {
+body,
+html {
   line-height: 1;
   scroll-padding-top: 110px;
   font-family: "游ゴシック", "ヒラギノ角ゴ ProN";
@@ -157,7 +158,8 @@ ul li {
   border-left: 4px solid #004225;
   border-right: 4px solid #004225;
 }
-.body .service-section .left-card, .body .service-section .right-card {
+.body .service-section .left-card,
+.body .service-section .right-card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -166,18 +168,21 @@ ul li {
   border: 4px solid #004225;
   padding: 0 40px;
 }
-.body .service-section .left-card .sub-title, .body .service-section .right-card .sub-title {
+.body .service-section .left-card .sub-title,
+.body .service-section .right-card .sub-title {
   font-size: 24px;
   font-weight: 600;
   color: #004225;
 }
-.body .service-section .left-card .main-title, .body .service-section .right-card .main-title {
+.body .service-section .left-card .main-title,
+.body .service-section .right-card .main-title {
   font-size: 32px;
   font-weight: 600;
   color: #004225;
   margin-top: 8px;
 }
-.body .service-section .left-card .description, .body .service-section .right-card .description {
+.body .service-section .left-card .description,
+.body .service-section .right-card .description {
   font-size: 20px;
   font-weight: 300;
   width: 100%;
@@ -637,7 +642,8 @@ ul li {
 .body .form-section .form-content .content-selector.focus {
   border: 3px solid #004225;
 }
-.body .form-section .form-content input[type=text], .body .form-section .form-content input[type=email] {
+.body .form-section .form-content input[type=text],
+.body .form-section .form-content input[type=email] {
   outline: none;
   width: 420px;
   height: 50px;
@@ -646,7 +652,8 @@ ul li {
   border: 2px solid #aaaaaa;
   border-radius: 10px;
 }
-.body .form-section .form-content input[type=text]:focus, .body .form-section .form-content input[type=email]:focus {
+.body .form-section .form-content input[type=text]:focus,
+.body .form-section .form-content input[type=email]:focus {
   border: 3px solid #004225;
 }
 .body .form-section .form-content textarea {
@@ -664,7 +671,9 @@ ul li {
 .body .form-section .form-content input[type=text]::-moz-placeholder, .body .form-section .form-content input[type=email]::-moz-placeholder, .body .form-section .form-content textarea::-moz-placeholder {
   color: #aaaaaa;
 }
-.body .form-section .form-content input[type=text]::placeholder, .body .form-section .form-content input[type=email]::placeholder, .body .form-section .form-content textarea::placeholder {
+.body .form-section .form-content input[type=text]::placeholder,
+.body .form-section .form-content input[type=email]::placeholder,
+.body .form-section .form-content textarea::placeholder {
   color: #aaaaaa;
 }
 .body .form-section .form-content .form-label-wrap {
@@ -722,64 +731,68 @@ ul li {
   background-color: #005c33;
 }
 
-footer {
+.sp-footer {
+  display: none;
+}
+
+.pc-footer {
   background-color: #004225;
   color: #ffffff;
   width: 100%;
   padding: 20px;
 }
-footer .wrap {
+.pc-footer .wrap {
   display: flex;
   justify-content: center;
   gap: 20px;
   align-items: center;
 }
-footer .wrap .footer-item {
+.pc-footer .wrap .footer-item {
   display: flex;
   width: 450px;
   padding: 0 30px;
 }
-footer .wrap .footer-item.page-guide {
+.pc-footer .wrap .footer-item.page-guide {
   justify-content: end;
   gap: 80px;
 }
-footer .wrap .footer-item.logo-area {
+.pc-footer .wrap .footer-item.logo-area {
   width: auto;
 }
-footer .wrap .guide-wrapper {
+.pc-footer .wrap .guide-wrapper {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-footer .wrap .guide-wrapper .page-guide-item {
+.pc-footer .wrap .guide-wrapper .page-guide-item {
   font-size: 14px;
   padding: 10px 0;
   font-weight: 300;
   cursor: pointer;
 }
-footer .wrap .guide-wrapper .page-guide-item:hover {
+.pc-footer .wrap .guide-wrapper .page-guide-item:hover {
   color: white;
 }
-footer .wrap .guide-wrapper a {
+.pc-footer .wrap .guide-wrapper a {
   color: #ffffff;
   text-decoration: none;
 }
-footer .wrap .logo {
+.pc-footer .wrap .logo {
   width: 150px;
   height: 150px;
 }
-footer .wrap .info-wapper {
+.pc-footer .wrap .info-wapper {
   display: flex;
   flex-direction: column;
 }
-footer .wrap .info-wapper .company-info-item {
+.pc-footer .wrap .info-wapper .company-info-item {
   font-size: 14px;
   padding: 8px 0;
 }
-footer .wrap .info-wapper .company-info-item.company-name {
+.pc-footer .wrap .info-wapper .company-info-item.company-name {
   font-weight: 600;
 }
-footer .footer-text {
+.pc-footer .footer-text {
   padding: 10px;
   font-size: 12px;
   font-weight: 300;
@@ -951,7 +964,8 @@ footer .footer-text {
     border-left: 3px solid #004225;
     border-right: 3px solid #004225;
   }
-  .body .service-section .left-card, .body .service-section .right-card {
+  .body .service-section .left-card,
+  .body .service-section .right-card {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -961,18 +975,21 @@ footer .footer-text {
     border: 4px solid #004225;
     padding: 1em 2em;
   }
-  .body .service-section .left-card .sub-title, .body .service-section .right-card .sub-title {
+  .body .service-section .left-card .sub-title,
+  .body .service-section .right-card .sub-title {
     font-size: 24px;
     font-weight: 600;
     color: #004225;
   }
-  .body .service-section .left-card .main-title, .body .service-section .right-card .main-title {
+  .body .service-section .left-card .main-title,
+  .body .service-section .right-card .main-title {
     font-size: 32px;
     font-weight: 600;
     color: #004225;
     margin-top: 8px;
   }
-  .body .service-section .left-card .description, .body .service-section .right-card .description {
+  .body .service-section .left-card .description,
+  .body .service-section .right-card .description {
     font-size: 14px;
     font-weight: 300;
     width: 100%;
@@ -1348,7 +1365,8 @@ footer .footer-text {
     border: 2px solid #aaaaaa;
     border-radius: 10px;
   }
-  .body .form-section .form-content input[type=text], .body .form-section .form-content input[type=email] {
+  .body .form-section .form-content input[type=text],
+  .body .form-section .form-content input[type=email] {
     width: 100%;
     height: 50px;
     padding: 3px 10px;
@@ -1420,44 +1438,63 @@ footer .footer-text {
   .body .form-section .submit-button:hover {
     background-color: #005c33;
   }
-  footer .wrap {
-    width: 300px;
-    margin: 0 auto;
+  .pc-footer {
+    display: none;
   }
-  footer .wrap .footer-item {
+  .sp-footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 0;
-    gap: 0;
-    margin: 0 auto;
-  }
-  footer .wrap .footer-item.page-guide {
-    display: none;
-  }
-  footer .wrap .footer-item.logo-area {
-    padding: 0;
-    width: auto;
-  }
-  footer .wrap .footer-item.logo-area .logo {
-    width: 40px;
-  }
-  footer .wrap .footer-item.company-info {
-    margin: 0;
-    width: 200px;
+    gap: 24px;
+    background-color: #004225;
     color: #ffffff;
+    width: 100%;
+    padding: 20px;
   }
-  footer .wrap .footer-item.company-info .company-info-item {
+  .sp-footer .wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .sp-footer .wrapper .guide-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .sp-footer .wrapper .guide-item-wrapper .page-guide-item {
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+  }
+  .sp-footer .wrapper .logo {
+    width: 100px;
+    height: 100px;
+  }
+  .sp-footer .wrapper .info-wapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .sp-footer .wrapper .info-wapper .company-info-wrapper {
+    display: flex;
+    gap: 20px;
+  }
+  .sp-footer .wrapper .info-wapper .company-info-wrapper .company-info-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sp-footer .wrapper .info-wapper .company-info-wrapper .company-info-item-wrapper .company-name {
+    font-weight: bold;
+  }
+  .sp-footer .wrapper .info-wapper .company-info-wrapper .company-info-item-wrapper .company-info-item {
     font-size: 12px;
-    padding: 5px 0;
-    font-weight: 300;
+    line-height: 1.2rem;
   }
-  footer .wrap .footer-item.company-info .company-info-item.company-name {
-    font-weight: 500;
-  }
-  footer .footer-text {
-    padding: 5px;
+  .sp-footer .footer-text {
     font-size: 10px;
   }
 }/*# sourceMappingURL=style.css.map */

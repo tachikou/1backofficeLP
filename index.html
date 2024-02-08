@@ -1,389 +1,427 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>1backoffice</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <!-- <div class="screen"> -->
-      <!-- header -->
-      <header class="header">
-        <div class="wrap">
-          <a href="#" class="icon-area">
-            <img class="logo" src="img/logo/logo_normal.svg" />
-            <img class="title" src="img/logo/logo_normal_text.svg" />
-          </a>
-          <div class="header-menu">
-              <!-- SPの時は非表示 -->
-              <a href="#service" class="items">サービス</a>
-              <div class="vertical-line"></div>
-              <a href="#plan" class="items">料金・プラン</a>
-              <div class="vertical-line"></div>
-              <a href="#flow" class="items">ご利用の流れ</a>
-              <a href="#contact" class="normal-button">お問い合わせ</a>
-              <!-- ここまで -->
-              <!-- PCの時は非表示 -->
-              <label class="hamburger-button-wrapper">
-                <input type="checkbox" id="hamburger-input">
-                <div class="hamburger-button"></div>
-                <div class="hamburger-menu">
-                  <a href="#service" class="hamburger-item">サービス</a>
-                  <a href="#plan" class="hamburger-item">料金・プラン</a>
-                  <a href="#flow" class="hamburger-item">ご利用の流れ</a>
-                  <a href="#contact" class="hamburger-normal-button">お問い合わせ</a>
-                </div>
-              </label>
-              <!-- ここまで -->
-          </div>
-        </div>
-      </header>
 
-      <!-- body -->
-      <div class="body">
-        <div class="hero-section" id="top">
-          <div class="hero-wrapper">
-            <img class="logo" src="img/logo/logo_white.svg">
-            <div class="hero-contents">
-              <img class="company-name" src="img/logo/logo_white_text.svg">
-              <p class="hero-text">
-                従業員数20名以下の創業ステージの企業様を中心に、<br/>バックオフィス業務全体を分析し、<br/>
-                業務効率とリスク管理のバランスを<br/>最適化するコンサルティングを提供しています。
-              </p>
-            </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1backoffice</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="wrap">
+      <a href="#" class="icon-area">
+        <img class="logo" src="img/logo/logo_normal.svg" />
+        <img class="title" src="img/logo/logo_normal_text.svg" />
+      </a>
+      <div class="header-menu">
+        <!-- SPの時は非表示 -->
+        <a href="#service" class="items">サービス</a>
+        <div class="vertical-line"></div>
+        <a href="#plan" class="items">料金・プラン</a>
+        <div class="vertical-line"></div>
+        <a href="#flow" class="items">ご利用の流れ</a>
+        <a href="#contact" class="normal-button">お問い合わせ</a>
+        <!-- ここまで -->
+        <!-- PCの時は非表示 -->
+        <label class="hamburger-button-wrapper">
+          <input type="checkbox" id="hamburger-input">
+          <div class="hamburger-button"></div>
+          <div class="hamburger-menu">
+            <a href="#service" class="hamburger-item">サービス</a>
+            <a href="#plan" class="hamburger-item">料金・プラン</a>
+            <a href="#flow" class="hamburger-item">ご利用の流れ</a>
+            <a href="#contact" class="hamburger-normal-button">お問い合わせ</a>
           </div>
-        </div>
-        <div class="service-section" id="service">
-          <div class="title-wrapper">
-            <div class="title">サービス</div>
-          </div>
-          <div class="left-card">
-            <div class="contents">
-              <p class="sub-title">バックオフィス改善</p>
-              <p class="main-title">コンサルティング</p>
-              <p class="description">
-                小企業事業者（従業員20名以下が目安）に対して、バックオフィス全体を俯瞰した「業務効率」と「リスク管理」の最適化コンサルティングを行います。
-              </p>
-            </div>
-          </div>
-          <img src="img/undraw-connecting-teams-re-hno7-1-1.svg" class="first-illustration">
-          <div class="right-card">
-            <div class="contents">
-              <p class="sub-title">小規模企業向けERP</p>
-              <p class="main-title">1backoffice</p>
-              <p class="description">
-                人事労務、経理、情報端末管理などバックオフィス全体のデータを一元管理し、部署横断的な業務負担を大幅に軽減します。
-              </p>
-            </div>
-          </div>
-          <img src="img/undraw_about_us_page_re_2jfm.svg" class="second-illustration">
-          <div class="left-card">
-            <div class="contents">
-              <p class="sub-title">キャッチコピーを入力</p>
-              <p class="main-title">サービス名を入力</p>
-              <p class="description">
-                サービスの詳細を個々に記載して下さい。heightだけ固定であれば、基本的にどのような文章でも挿入可能です。サービス名やキャッチコピーによって文字の大きさを可変にしておきます。
-              </p>
-            </div>
-          </div>
-          <img src="img/undraw-connecting-teams-re-hno7-1-1.svg" class="third-illustration">
-        </div>
-        <div class="plan-section" id="plan">
-          <div class="title-wrapper">
-            <div class="title">料金・プラン</div>
-          </div>
-          <div class="plan-card-wrapper">
-            <div class="card">
-              <p class="plan-name">〇〇プラン</p>
-              <p class="plan-price">100,000</p>
-              <p class="plan-description">texttexttexttexttexttexttexttexttexttexttexttext</p>
-            </div>
-            <div class="card">
-              <p class="plan-name">〇〇プラン</p>
-              <p class="plan-price">300,000</p>
-              <p class="plan-description">texttexttexttexttexttexttexttexttexttexttexttext</p>
-            </div>
-            <div class="card">
-              <p class="plan-name">〇〇プラン</p>
-              <p class="plan-price">700,000</p>
-              <p class="plan-description">texttexttexttexttexttexttexttexttexttexttexttext</p>
-            </div>
-          </div>
-          <div class="plan-description-card-wrapper">
-            <div class="description-card">
-              <span class="spaces"></span>
-              <span class="contents">
-                <p class="plan-name">〇〇プラン</p>
-                <p class="plan-price">300,000</p>
-                <p class="plan-description">
-                  texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-                </p>
-              </span>
-            </div>
-            <div class="description-card">
-              <span class="contents">
-                <p class="plan-name">〇〇プラン</p>
-                <p class="plan-price">100,000</p>
-                <p class="plan-description">
-                  texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-                </p>
-              </span>
-              <span class="spaces"></span>
-            </div>
-            <div class="description-card">
-              <span class="spaces"></span>
-              <span class="contents">
-                <p class="plan-name">〇〇プラン</p>
-                <p class="plan-price">700,000</p>
-                <p class="plan-description">
-                  texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
-                </p>
-              </span>
-            </div>
-          </div>
-          <a class="estimate-button" href="#contact">
-            無料お見積り
-            <img src="img/vector.svg" class="allow">
-          </a>
-        </div>
-        <div class="common-section">
-          <div class="title-wrapper">
-            <div class="title">テキストテキスト</div>
-          </div>
-          <div class="contents-wrapper">
-            <div class="content">
-              <img src="img/image-2.png">
-              <p class="text">
-                この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-              </p>
-            </div>
-            <div class="content">
-              <img src="img/image-2.png">
-              <p class="text">
-                この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="faq-section">
-          <div class="title-wrapper">
-            <div class="title">FAQ</div>
-          </div>
-          <div class="faq-content-wrapper">
-            <div class="faq-content">
-              <p class="question">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
-              <div class="answer">
-                <p class="main-text">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
-                <p class="sub-text">
-                  この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-                </p>
-              </div>
-            </div>
-            <div class="faq-content">
-              <p class="question">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
-              <div class="answer">
-                <p class="main-text">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
-                <p class="sub-text">
-                  この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="example-section">
-          <div class="title-wrapper">
-            <div class="title">導入事例</div>
-          </div>
-          <div class="example-item-wrapper">
-            <div class="example-item">
-              <div class="img-wrap">
-                <img src="img/image-2.png">
-              </div>
-              <div class="contents">
-                <p class="company-name">株式会社テスト・テストテスト</p>
-                <p class="description">
-                  この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-                </p>
-              </div>
-            </div>
-            <div class="example-item">
-              <div class="img-wrap">
-                <img src="img/image-2.png">
-              </div>
-              <div class="contents">
-                <p class="company-name">株式会社テスト・テストテスト</p>
-                <p class="description">
-                  この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-                </p>
-              </div>
-            </div>
-            <div class="example-item">
-              <div class="img-wrap">
-                <img src="img/image-2.png">
-              </div>
-              <div class="contents">
-                <p class="company-name">株式会社テスト・テストテスト</p>
-                <p class="description">
-                  この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-                </p>
-              </div>
-            </div>
-            <a class="estimate-button" href="#contact">
-              無料お見積り
-              <img src="img/vector.svg" class="allow">
-            </a>
-          </div>
-        </div>
-        <div class="flow-section" id="flow">
-          <div class="flow-wrapper">
-            <div class="flow-contents">
-              <div class="flow-header">ご利用の流れ</div>
-              <div class="flow-item">
-                <p class="flow-num">1</p>
-                <p class="flow-title">お問い合わせ</p>
-                <p class="flow-body">texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
-              </div>
-              <div class="flow-item">
-                <p class="flow-num">2</p>
-                <p class="flow-title">お見積もり</p>
-                <p class="flow-body">texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
-              </div>
-              <div class="flow-item last-item">
-                <p class="flow-num">3</p>
-                <p class="flow-title">ご利用開始</p>
-                <p class="flow-body">texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="form-guide" id="contact">
-          <p class="text">まずはお問い合わせ！</p>
-        </div>
-        <div class="form-section">
-          <form action="送信先のURL">
-            <div class="form-content">
-              <label>
-                <div class="form-label-wrap">
-                  <div class="title-text">名前</div>
-                  <div class="required-text">必須</div>
-                </div>
-                <input type="text" name="name" placeholder="名前を入力して下さい">
-              </label>
-            </div>
-            <div class="form-content">
-              <label>
-                <div class="form-label-wrap">
-                  <div class="title-text">会社名</div>
-                  <div class="required-text optional">任意</div>
-                </div>
-                <input type="text" name="company-name" placeholder="会社名を入力して下さい">
-              </label>
-            </div>
-            <div class="form-content">
-              <label>
-                <div class="form-label-wrap">
-                  <div class="title-text">メールアドレス</div>
-                  <div class="required-text">必須</div>
-                </div>
-                <input type="email" name="email" placeholder="メールアドレスを入力して下さい">
-              </label>
-            </div>
-            <div class="form-content">
-              <label>
-                <div class="form-label-wrap">
-                  <div class="title-text">お問い合わせ内容</div>
-                  <div class="required-text">必須</div>
-                </div>
-                <!-- TODO: selectタグにスタイル適用させる -->
-                <div class="content-selector">
-                  <select id="selector-for-content" name="content" required>
-                    <option value="" class="initial-option">お問い合わせ内容を選択して下さい</option>
-                    <option value="1">選択肢1</option>
-                    <option value="2">選択肢2</option>
-                    <option value="3">選択肢3</option>
-                  </select>
-                </div>
-              </label>
-            </div>
-            <div class="form-content">
-              <label>
-                <div class="form-label-wrap">
-                  <div class="title-text">詳細</div>
-                  <div class="required-text optional">任意</div>
-                </div>
-                <textarea name="detail" placeholder="お問い合わせ内容を詳細に教えて下さい"></textarea>
-              </label>
-            </div>
-            <div class="required-content">
-              <label class="required-content">
-                <input type="checkbox" name="consent">
-                <div class="consent-text">当社の<a>プライバシーポリシー</a>に同意する</div>
-              </label>
-            </div>
-            <button class="submit-button" type="submit">送信</button>
-          </form>
+        </label>
+        <!-- ここまで -->
+      </div>
+    </div>
+  </header>
+
+  <!-- body -->
+  <div class="body">
+    <div class="hero-section" id="top">
+      <div class="hero-wrapper">
+        <img class="logo" src="img/logo/logo_white.svg">
+        <div class="hero-contents">
+          <img class="company-name" src="img/logo/logo_white_text.svg">
+          <p class="hero-text">
+            従業員数20名以下の創業ステージの企業様を中心に、<br />バックオフィス業務全体を分析し、<br />
+            業務効率とリスク管理のバランスを<br />最適化するコンサルティングを提供しています。
+          </p>
         </div>
       </div>
-
-      <!-- footer -->
-      <footer>
-        <div class="wrap">
-            <div class="footer-item page-guide">
-              <div class="guide-wrapper">
-                <a href="#service" class="page-guide-item">サービス</a>
-                <a href="#plan" class="page-guide-item">料金・プラン</a>
-                <a href="#flow" class="page-guide-item">ご利用の流れ</a>
-              </div>
-              <div class="guide-wrapper">
-                <a href="#contact" class="page-guide-item">お問い合わせ</a>
-                <a class="page-guide-item">texttexttexttext</a>
-                <a class="page-guide-item">texttexttext</a>
-              </div>
-            </div>
-            <div class="footer-item logo-area">
-              <img class="logo" src="img/logo/logo_white.svg">
-            </div>
-            <div class="footer-item company-info">
-              <div class="info-wapper">
-                <p class="company-info-item company-name">1backoffice合同会社</p>
-                <p class="company-info-item">神奈川県相模原市緑区西橋本5-4-21<br />SIC-1 1312号室</p>
-                <p class="company-info-item">代表 岩崎 奈緒己</p>
-                <p class="company-info-item">設立 2023年5月1日</p>
-              </div>
-            </div>
+    </div>
+    <div class="service-section" id="service">
+      <div class="title-wrapper">
+        <div class="title">サービス</div>
+      </div>
+      <div class="left-card">
+        <div class="contents">
+          <p class="sub-title">バックオフィス改善</p>
+          <p class="main-title">コンサルティング</p>
+          <p class="description">
+            小企業事業者（従業員20名以下が目安）に対して、バックオフィス全体を俯瞰した「業務効率」と「リスク管理」の最適化コンサルティングを行います。
+          </p>
         </div>
-        <div class="footer-text">Copyright 2023 1backoffice LLC</div>
-      </footer>
-    <!-- </div> -->
-  </body>
+      </div>
+      <img src="img/undraw-connecting-teams-re-hno7-1-1.svg" class="first-illustration">
+      <div class="right-card">
+        <div class="contents">
+          <p class="sub-title">小規模企業向けERP</p>
+          <p class="main-title">1backoffice</p>
+          <p class="description">
+            人事労務、経理、情報端末管理などバックオフィス全体のデータを一元管理し、部署横断的な業務負担を大幅に軽減します。
+          </p>
+        </div>
+      </div>
+      <img src="img/undraw_about_us_page_re_2jfm.svg" class="second-illustration">
+      <div class="left-card">
+        <div class="contents">
+          <p class="sub-title">キャッチコピーを入力</p>
+          <p class="main-title">サービス名を入力</p>
+          <p class="description">
+            サービスの詳細を個々に記載して下さい。heightだけ固定であれば、基本的にどのような文章でも挿入可能です。サービス名やキャッチコピーによって文字の大きさを可変にしておきます。
+          </p>
+        </div>
+      </div>
+      <img src="img/undraw-connecting-teams-re-hno7-1-1.svg" class="third-illustration">
+    </div>
+    <div class="plan-section" id="plan">
+      <div class="title-wrapper">
+        <div class="title">料金・プラン</div>
+      </div>
+      <div class="plan-card-wrapper">
+        <div class="card">
+          <p class="plan-name">〇〇プラン</p>
+          <p class="plan-price">100,000</p>
+          <p class="plan-description">texttexttexttexttexttexttexttexttexttexttexttext</p>
+        </div>
+        <div class="card">
+          <p class="plan-name">〇〇プラン</p>
+          <p class="plan-price">300,000</p>
+          <p class="plan-description">texttexttexttexttexttexttexttexttexttexttexttext</p>
+        </div>
+        <div class="card">
+          <p class="plan-name">〇〇プラン</p>
+          <p class="plan-price">700,000</p>
+          <p class="plan-description">texttexttexttexttexttexttexttexttexttexttexttext</p>
+        </div>
+      </div>
+      <div class="plan-description-card-wrapper">
+        <div class="description-card">
+          <span class="spaces"></span>
+          <span class="contents">
+            <p class="plan-name">〇〇プラン</p>
+            <p class="plan-price">300,000</p>
+            <p class="plan-description">
+              texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+            </p>
+          </span>
+        </div>
+        <div class="description-card">
+          <span class="contents">
+            <p class="plan-name">〇〇プラン</p>
+            <p class="plan-price">100,000</p>
+            <p class="plan-description">
+              texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+            </p>
+          </span>
+          <span class="spaces"></span>
+        </div>
+        <div class="description-card">
+          <span class="spaces"></span>
+          <span class="contents">
+            <p class="plan-name">〇〇プラン</p>
+            <p class="plan-price">700,000</p>
+            <p class="plan-description">
+              texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext
+            </p>
+          </span>
+        </div>
+      </div>
+      <a class="estimate-button" href="#contact">
+        無料お見積り
+        <img src="img/vector.svg" class="allow">
+      </a>
+    </div>
+    <div class="common-section">
+      <div class="title-wrapper">
+        <div class="title">テキストテキスト</div>
+      </div>
+      <div class="contents-wrapper">
+        <div class="content">
+          <img src="img/image-2.png">
+          <p class="text">
+            この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+          </p>
+        </div>
+        <div class="content">
+          <img src="img/image-2.png">
+          <p class="text">
+            この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="faq-section">
+      <div class="title-wrapper">
+        <div class="title">FAQ</div>
+      </div>
+      <div class="faq-content-wrapper">
+        <div class="faq-content">
+          <p class="question">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+          <div class="answer">
+            <p class="main-text">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+            <p class="sub-text">
+              この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+            </p>
+          </div>
+        </div>
+        <div class="faq-content">
+          <p class="question">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+          <div class="answer">
+            <p class="main-text">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+            <p class="sub-text">
+              この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="example-section">
+      <div class="title-wrapper">
+        <div class="title">導入事例</div>
+      </div>
+      <div class="example-item-wrapper">
+        <div class="example-item">
+          <div class="img-wrap">
+            <img src="img/image-2.png">
+          </div>
+          <div class="contents">
+            <p class="company-name">株式会社テスト・テストテスト</p>
+            <p class="description">
+              この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+            </p>
+          </div>
+        </div>
+        <div class="example-item">
+          <div class="img-wrap">
+            <img src="img/image-2.png">
+          </div>
+          <div class="contents">
+            <p class="company-name">株式会社テスト・テストテスト</p>
+            <p class="description">
+              この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+            </p>
+          </div>
+        </div>
+        <div class="example-item">
+          <div class="img-wrap">
+            <img src="img/image-2.png">
+          </div>
+          <div class="contents">
+            <p class="company-name">株式会社テスト・テストテスト</p>
+            <p class="description">
+              この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+            </p>
+          </div>
+        </div>
+        <a class="estimate-button" href="#contact">
+          無料お見積り
+          <img src="img/vector.svg" class="allow">
+        </a>
+      </div>
+    </div>
+    <div class="flow-section" id="flow">
+      <div class="flow-wrapper">
+        <div class="flow-contents">
+          <div class="flow-header">ご利用の流れ</div>
+          <div class="flow-item">
+            <p class="flow-num">1</p>
+            <p class="flow-title">お問い合わせ</p>
+            <p class="flow-body">
+              texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+          </div>
+          <div class="flow-item">
+            <p class="flow-num">2</p>
+            <p class="flow-title">お見積もり</p>
+            <p class="flow-body">
+              texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+          </div>
+          <div class="flow-item last-item">
+            <p class="flow-num">3</p>
+            <p class="flow-title">ご利用開始</p>
+            <p class="flow-body">
+              texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-guide" id="contact">
+      <p class="text">まずはお問い合わせ！</p>
+    </div>
+    <div class="form-section">
+      <form action="送信先のURL">
+        <div class="form-content">
+          <label>
+            <div class="form-label-wrap">
+              <div class="title-text">名前</div>
+              <div class="required-text">必須</div>
+            </div>
+            <input type="text" name="name" placeholder="名前を入力して下さい">
+          </label>
+        </div>
+        <div class="form-content">
+          <label>
+            <div class="form-label-wrap">
+              <div class="title-text">会社名</div>
+              <div class="required-text optional">任意</div>
+            </div>
+            <input type="text" name="company-name" placeholder="会社名を入力して下さい">
+          </label>
+        </div>
+        <div class="form-content">
+          <label>
+            <div class="form-label-wrap">
+              <div class="title-text">メールアドレス</div>
+              <div class="required-text">必須</div>
+            </div>
+            <input type="email" name="email" placeholder="メールアドレスを入力して下さい">
+          </label>
+        </div>
+        <div class="form-content">
+          <label>
+            <div class="form-label-wrap">
+              <div class="title-text">お問い合わせ内容</div>
+              <div class="required-text">必須</div>
+            </div>
+            <!-- TODO: selectタグにスタイル適用させる -->
+            <div class="content-selector">
+              <select id="selector-for-content" name="content" required>
+                <option value="" class="initial-option">お問い合わせ内容を選択して下さい</option>
+                <option value="1">選択肢1</option>
+                <option value="2">選択肢2</option>
+                <option value="3">選択肢3</option>
+              </select>
+            </div>
+          </label>
+        </div>
+        <div class="form-content">
+          <label>
+            <div class="form-label-wrap">
+              <div class="title-text">詳細</div>
+              <div class="required-text optional">任意</div>
+            </div>
+            <textarea name="detail" placeholder="お問い合わせ内容を詳細に教えて下さい"></textarea>
+          </label>
+        </div>
+        <div class="required-content">
+          <label class="required-content">
+            <input type="checkbox" name="consent">
+            <div class="consent-text">当社の<a>プライバシーポリシー</a>に同意する</div>
+          </label>
+        </div>
+        <button class="submit-button" type="submit">送信</button>
+      </form>
+    </div>
+  </div>
 
-  <script>
-    const selectWrapper = document.getElementsByClassName('content-selector')[0];
-    const selector = document.getElementById('selector-for-content');
-    selector.addEventListener('click', () => {
-      selectWrapper.classList.add('focus');
-    });
+  <!-- footer -->
+  <footer class="pc-footer">
+    <div class="wrap">
+      <div class="footer-item page-guide">
+        <div class="guide-wrapper">
+          <a href="#service" class="page-guide-item">サービス</a>
+          <a href="#plan" class="page-guide-item">料金・プラン</a>
+          <a href="#flow" class="page-guide-item">ご利用の流れ</a>
+        </div>
+        <div class="guide-wrapper">
+          <a href="#contact" class="page-guide-item">お問い合わせ</a>
+          <a class="page-guide-item">texttexttexttext</a>
+          <a class="page-guide-item">texttexttext</a>
+        </div>
+      </div>
+      <div class="footer-item logo-area">
+        <img class="logo" src="img/logo/logo_white.svg">
+      </div>
+      <div class="footer-item company-info">
+        <div class="info-wapper">
+          <p class="company-info-item company-name">1backoffice合同会社</p>
+          <p class="company-info-item">神奈川県相模原市緑区西橋本5-4-21<br />SIC-1 1312号室</p>
+          <p class="company-info-item">代表 岩崎 奈緒己</p>
+          <p class="company-info-item">設立 2023年5月1日</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-text">Copyright 2023 1backoffice LLC</div>
+  </footer>
 
-    selector.addEventListener('blur', () => {
-      selectWrapper.classList.remove('focus');
-    });
+  <footer class="sp-footer">
+    <div class="wrapper">
+      <div class="guide-item-wrapper">
+        <a href="#service" class="page-guide-item">サービス</a>
+        <a href="#plan" class="page-guide-item">料金・プラン</a>
+        <a href="#flow" class="page-guide-item">ご利用の流れ</a>
+      </div>
+      <div class="guide-item-wrapper">
+        <a href="#contact" class="page-guide-item">お問い合わせ</a>
+        <a class="page-guide-item">texttexttexttext</a>
+        <a class="page-guide-item">texttexttext</a>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="footer-item logo-area">
+        <img class="logo" src="img/logo/logo_white.svg">
+      </div>
+      <div class="info-wapper">
+        <p class="company-info-item company-name">1backoffice合同会社</p>
+        <div class="company-info-wrapper">
+          <div class="company-info-item-wrapper">
+            <p class="company-info-item">代表</p>
+            <p class="company-info-item">設立</p>
+            <p class="company-info-item">所在地</p>
+          </div>
+          <div class="company-info-item-wrapper">
+            <p class="company-info-item">岩崎 奈緒己</p>
+            <p class="company-info-item">2023年 5月 1日</p>
+            <p class="company-info-item">神奈川県相模原市緑区西橋本5-4-21<br />SIC-1 1312号室</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="footer-text">Copyright 2023 1backoffice LLC</div>
+  </footer>
+</body>
 
-    document.addEventListener('DOMContentLoaded', () => {
-      const links = document.querySelectorAll('.hamburger-menu a');
-      const checkbox = document.getElementById('hamburger-input');
+<script>
+  const selectWrapper = document.getElementsByClassName('content-selector')[0];
+  const selector = document.getElementById('selector-for-content');
+  selector.addEventListener('click', () => {
+    selectWrapper.classList.add('focus');
+  });
 
-      links.forEach((link) => {
-        link.addEventListener('click', () => {
-          if (checkbox.checked) {
-            checkbox.checked = false;
-          }
-        });
+  selector.addEventListener('blur', () => {
+    selectWrapper.classList.remove('focus');
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('.hamburger-menu a');
+    const checkbox = document.getElementById('hamburger-input');
+
+    links.forEach((link) => {
+      link.addEventListener('click', () => {
+        if (checkbox.checked) {
+          checkbox.checked = false;
+        }
       });
     });
-  </script>
+  });
+</script>
+
 </html>
